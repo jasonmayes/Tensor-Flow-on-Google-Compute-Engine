@@ -44,18 +44,23 @@ sudo apt-get install python2.7
 
 ## What gets installed?
 
-Not a lot, but it's the setup and the deps that take time to find if doing this by yourself! Life is always simpler when you have the answer infront of you...
+Not a lot, but it's the setup and the dependencies for the below that take time to find if doing this by yourself! 
+Life is always simpler when you have the answer infront of you...
 
 * Java 8
 * [Bazel](https://github.com/bazelbuild/bazel) for building
 * Python and associated deps.
 * [TensorFlow](https://github.com/tensorflow/tensorflow)
+* Git
+* Unzip
+* Dependiences for all of the above. See script for exact details.
 
 
 ## What gets changed?
 
 * A swap partition is created on your physical disk
 * Swappiness value for the OS is changed so that it prefers to use RAM. It will only use swap when RAM is full.
+* $PATH has $HOME/bin added to it.
  
 
 ## Questions / Comments?

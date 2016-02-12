@@ -36,7 +36,7 @@ bazel-bin/tensorflow/models/image/imagenet/classify_image --image_file=foo.jpg
 
 ## What gets installed?
 
-Not a lot, but its the setup and the deps that take time to find if doing this by yourself! Life is always simpler when you have the answer infront of you...
+Not a lot, but it's the setup and the deps that take time to find if doing this by yourself! Life is always simpler when you have the answer infront of you...
 
 * Java 8
 * [Bazel](https://github.com/bazelbuild/bazel) for building
@@ -46,10 +46,11 @@ Not a lot, but its the setup and the deps that take time to find if doing this b
 
 ## What gets changed?
 
-* We create a swap partition on your physical disk
-* We change the swappiness value for the OS so that it prefers to use RAM. It will only use swap when RAM is full.
+* A swap partition is created on your physical disk
+* Swappiness value for the OS is changed so that it prefers to use RAM. It will only use swap when RAM is full.
  
 
 ## Questions / Comments?
 
 This has been tried and tested with the current version of [TensorFlow](https://github.com/tensorflow/tensorflow) as at 12th Feb 2016. 
+If you found this useful, you may enjoy my other ramblings and discoveries. Feel free to [check out my website to connect with me on social channels](http://www.jasonmayes.com).

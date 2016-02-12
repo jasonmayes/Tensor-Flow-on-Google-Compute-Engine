@@ -9,7 +9,7 @@ You can probably get away with a lower spec machine (it may run slower - when co
 
 Anyhow, here is my machine spec on GCE which is a standard instance config:
 
-* n1-highcpu-4 instance with 3.6GB RAM.
+* n1-standard-2 with 7.5GB RAM or n1-highcpu-4 instance with 3.6GB RAM
 * Running vanilla Ubuntu Trusty 14.04 LTS.
 * 20GB persistent disk (we shall be using 4GB of this for our swap partition, and the rest you will need to store all your images and such). You could probably get away with less, but this gives us some flexablity. As an FYI after I had everything installed with OS I had used just under 14GB of space.
 

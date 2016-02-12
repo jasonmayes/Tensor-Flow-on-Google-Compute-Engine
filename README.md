@@ -11,7 +11,7 @@ Anyhow, here is my machine spec on GCE:
 
 * n1-highcpu-4 instance with 3.6GB RAM
 * Running vanilla Ubuntu Trusty 14.04 LTS.
-* 20GB persistent disk (we shall be using 4GB of this for our swap partition, and the rest you will need to store all your images and such). You could probably get away with less, but this gives us some flexablity. As an FYI after I had everything installed with OS I had used just under 14GB of space.
+* 20GB persistent disk (we shall be using 4GB of this for our swap partition, and the rest you will need to store all your images and such). You could probably get away with less, but this gives us some flexibility. As an FYI after I had everything installed with OS I had used just under 14GB of space.
 
 
 ## Usage / Quick Start
@@ -55,7 +55,7 @@ Life is always simpler when you have the answer infront of you...
 * [TensorFlow](https://github.com/tensorflow/tensorflow)
 * Git
 * Unzip
-* Dependiences for all of the above. See script for exact details.
+* Dependencies for all of the above. See script for exact details.
 
 
 ## What gets changed?

@@ -16,9 +16,11 @@ Anyhow, here is my machine spec on GCE:
 
 ## Usage / Quick Start
 
-* Save the script to your home directory.
-* chmod +x setupTensorFlowGCE.sh
-* Run: ./setupTensorFlowGCE.sh and follow any instructions.
+1. Save the script to your home directory.
+2. ```chmod +x setupTensorFlowGCE.sh ```
+3. Run: ```./setupTensorFlowGCE.sh``` and follow any instructions that appear. This will take about 5 mins to install everything.
+4. Now the environment is setup we can compile TensorFlow. Ensure you are in correct directory: ```cd ~/tensorflow/tensorflow``` and then run: ```bazel build -c opt //tensorflow/tools/pip_package:build_pip_package```. This will take some time to compile. Grab a coffee.
+5. TensorFlow is now ready to be used! Woohoo! Run the included example to test: ```bazel run tensorflow/models/image/imagenet:classify_image```
 
 
 ## Notes

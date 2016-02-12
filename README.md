@@ -63,7 +63,9 @@ Life is always simpler when you have the answer infront of you...
 * $PATH has $HOME/bin added to it.
  
 
-## Questions / Comments?
+## Questions / Comments / Disclaimer
 
 This has been tried and tested with the current version of [TensorFlow](https://github.com/tensorflow/tensorflow) as at 12th Feb 2016. 
+Also I would just like to say I am not by any means an expert on Tensor Flow, or machine learning, I like you am learning as I go along. Hopefuly this will help others out who are also just getting started and want to get playing quickly in the cloud.
+
 If you found this useful, you may enjoy my other ramblings and discoveries. Feel free to [check out my website to connect with me on social channels](http://www.jasonmayes.com).

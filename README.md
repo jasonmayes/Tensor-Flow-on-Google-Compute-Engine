@@ -37,9 +37,9 @@ bazel-bin/tensorflow/models/image/imagenet/classify_image --image_file=foo.jpg
 Also worthy of note is that in this script we fetch and compile Python from source. Depending on what repos you wish to add to your server you may be able to simplify this step by using this instead:
 
 ```shell
-#sudo add-apt-repository ppa:fkrull/deadsnakes
-#sudo apt-get update
-#sudo apt-get install python2.7
+sudo add-apt-repository ppa:fkrull/deadsnakes
+sudo apt-get update
+sudo apt-get install python2.7
 ```
 
 ## What gets installed?

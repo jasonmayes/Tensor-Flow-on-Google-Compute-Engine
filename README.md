@@ -14,11 +14,11 @@ Anyhow, here is my machine spec on GCE which is a standard instance config:
 * 20GB persistent disk (we shall be using 4GB of this for our swap partition, and the rest you will need to store all your images and such). You could probably get away with less, but this gives us some flexablity. As an FYI after I had everything installed with OS I had used just under 14GB of space.
 
 
-## Usage
+## Usage / Quick Start
 
 * Save the script to your home directory.
 * chmod +x setupTensorFlowGCE.sh
-* Run: ./setupTensorFlowGCE.sh
+* Run: ./setupTensorFlowGCE.sh and follow any instructions.
 
 
 ## Notes

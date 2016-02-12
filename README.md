@@ -24,6 +24,15 @@ Anyhow, here is my machine spec on GCE which is a standard instance config:
 ## Notes
 This script has been tried and tested within the Google Compute Engine environment. I have good faith it would work on other cloud services too assuming the base image of the OS was the same and was a 64bit CPU.
 
+Once you have run this script, you can run the following commands to classify your own image using the default trained model provided by TensorFlow:
+
+```shell
+cd /home/yourUsername/tensorflow/tensorflow
+```
+
+```shell
+bazel-bin/tensorflow/models/image/imagenet/classify_image --image_file=foo.jpg
+```
 
 ## What gets installed?
 

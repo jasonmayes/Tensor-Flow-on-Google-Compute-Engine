@@ -34,13 +34,21 @@ cd /home/yourUsername/tensorflow/tensorflow
 bazel-bin/tensorflow/models/image/imagenet/classify_image --image_file=foo.jpg
 ```
 
+Also worthy of note is that in this script we fetch and compile Python from source. Depending on what repos you wish to add to your server you may be able to simplify this step by using this instead:
+
+```shell
+#sudo add-apt-repository ppa:fkrull/deadsnakes
+#sudo apt-get update
+#sudo apt-get install python2.7
+```
+
 ## What gets installed?
 
 Not a lot, but it's the setup and the deps that take time to find if doing this by yourself! Life is always simpler when you have the answer infront of you...
 
 * Java 8
 * [Bazel](https://github.com/bazelbuild/bazel) for building
-* Python and associated deps
+* Python and associated deps.
 * [TensorFlow](https://github.com/tensorflow/tensorflow)
 
 

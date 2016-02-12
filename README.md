@@ -7,9 +7,9 @@
 
 You can probably get away with a lower spec machine (it may run slower - when compiling all cores were used to 100%!), but one thing you should pay attention to is RAM. Even with the 3.6 GB we have here, we still had to use SWAP when building at certain points. Given that hard drive disks on GCE are not physically attached to the machine (they are network attached I believe) this is not something you want to do often. 3.6GB seemed to be the sweet spot where it spent most of its time in RAM except a 1 or 2 times where it used almost the full 8GB of RAM + Swap. 
 
-Anyhow, here is my machine spec on GCE which is a standard instance config:
+Anyhow, here is my machine spec on GCE:
 
-* n1-standard-2 with 7.5GB RAM or n1-highcpu-4 instance with 3.6GB RAM
+* n1-highcpu-4 instance with 3.6GB RAM
 * Running vanilla Ubuntu Trusty 14.04 LTS.
 * 20GB persistent disk (we shall be using 4GB of this for our swap partition, and the rest you will need to store all your images and such). You could probably get away with less, but this gives us some flexablity. As an FYI after I had everything installed with OS I had used just under 14GB of space.
 

@@ -17,13 +17,17 @@ Anyhow, here is my machine spec on GCE:
 
 ## Usage / Quick Start
 
+A heads up of what your 5 minutes of fun will look like (sped up 400%):
+![tfinstall](https://cloud.githubusercontent.com/assets/4972997/13024353/24cfb9d2-d1a8-11e5-9e61-3f5e81e8fe66.gif)
+
+Lets go...
+
 1. Save the script to your home directory.
 2. ```chmod +x setupTensorFlowGCE.sh ```
 3. Run: ```./setupTensorFlowGCE.sh``` and follow any instructions that appear (basically say yes to everything and accept Java licence). This will take about 5 mins to install everything if you are watching the screen :-) Once it has finished run ```source ~/.bashrc``` to ensure your terminal can find bazel. Alternatively you can just log out and in again.
 4. Now the environment is setup we can compile TensorFlow. Ensure you are in correct directory: ```cd ~/tensorflow/tensorflow``` and then run: ```bazel build -c opt //tensorflow/tools/pip_package:build_pip_package```. This will take some time to compile. Grab a coffee. No really, we are looking at about 35 minutes here...
 5. TensorFlow is now ready to be used! Woohoo! Run the included example to test: ```bazel run tensorflow/models/image/imagenet:classify_image```
 
-![tfinstall](https://cloud.githubusercontent.com/assets/4972997/13024353/24cfb9d2-d1a8-11e5-9e61-3f5e81e8fe66.gif)
 
 ## Notes
 This script has been tried and tested within the Google Compute Engine environment. I have good faith it would work on other cloud services too assuming the base image of the OS was the same and was a 64bit CPU.

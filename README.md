@@ -57,6 +57,8 @@ One must remember here that this is raw CPU based data. If you have GPU support 
 
 I have tested peformance via a real world scenario of retraining one of the Tensor Flow examples of recognizing a custom object on a vareity of instance sizes. When you retrain the top layers of the model the system creates "bottlenecks" (a term referring to the layer just before the final output layer that actually does the classification) for all the input images. These take time to create and even on multicore systems pushes all cores close to 100%. So lets have some fun...
 
+![cpuusage](https://cloud.githubusercontent.com/assets/4972997/13094360/0b3db572-d4bf-11e5-8555-acc9bf143987.gif)
+
 **Input data:** 1920x1080 pixel resolution images (consider you will typically have 2000 - 3000 images as input data, maybe more, and each image has a coresponding "bottleneck" file needed to be generated).
 
 ### Results

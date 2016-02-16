@@ -50,6 +50,25 @@ sudo apt-get update
 sudo apt-get install python2.7
 ```
 
+
+## Performance
+
+One must remember here that this is raw CPU based data. If you have GPU support in the cloud performance will be way better, but at present GCE only has CPU based instances.
+
+I have tested peformance via a real world scenario of retraining one of the Tensor Flow examples of recognizing a custom object on a vareity of instance sizes. When you retrain the top layers of the model the system creates "bottlenecks" (a term referring to the layer just before the final output layer that actually does the classification) for all the input images. These take time to create and even on multicore systems pushes all cores close to 100%. So lets have some fun...
+
+**Input data:** 1920x1080 pixel resolution images (consider you will typically have 2000 - 3000 images as input data, maybe more, and each image has a coresponding "bottleneck" file needed to be generated).
+
+### Results
+
+I got the following results on different instance sizes:
+
+* **n1-highcpu-4** generated 4 bottlenecks per minute on average (4.1 hours per 1000 images).
+* **n1-highcpu-16** generated 15 bottlenecks per minute on average. (1.1 hours per 1000 images).
+* **n1-highcpu-24** generated 19 bottlenecks per minute on average. (53 mins per 1000 images). It should be noted that with a default Google account 24 CPUs is the maximum you can have in any one region without requesting an upgrade.
+
+As you can see, even with 24 virtual CPUs at work, it still takes a long time. If time is key, you are going to need to find a solution with the right GPU support to compile Tensor Flow with GPU support enabled. The only scalble one I know of right now at time of writing would be Amazon's offering which supports GPU instances. If anyone wants to run this over there, please let me know the results to post.
+
 ## What gets installed?
 
 Not a lot, but it's the setup and the dependencies for the below that take time to find if doing this by yourself! 

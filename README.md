@@ -70,7 +70,7 @@ I got the following results on different instance sizes (without compiling with 
 * **n1-highcpu-16** generated 15 bottlenecks per minute on average. (1.1 hours per 1000 images).
 * **n1-highcpu-24** generated 19 bottlenecks per minute on average. (53 mins per 1000 images). It should be noted that with a default Google account 24 CPUs is the maximum you can have in any one region without requesting an upgrade.
 
-However if we recompile the retrainer with AVX support using:
+However if we recompile the retrainer and labeler with AVX support using:
 
 ```shell
 bazel build -c opt --copt=-mavx tensorflow/examples/image_retraining:retrain

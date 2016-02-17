@@ -79,7 +79,7 @@ bazel build -c opt --copt=-mavx tensorflow/examples/label_image
 
 Then our training times drop dramatically:
 
-* **n1-highcpu-24** generated 185 bottlenecks per minute on average. (5.4 minutes per 1000 images).
+* **n1-highcpu-24** generated **185 bottlenecks per minute** on average. (**5.4 minutes per 1000 images**).
 
 
 ## What gets installed?

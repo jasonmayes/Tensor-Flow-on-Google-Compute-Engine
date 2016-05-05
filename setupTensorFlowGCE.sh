@@ -69,10 +69,10 @@ sudo echo "alias python=python2.7" >> ~/.bashrc
 source ~/.bashrc
 
 ################################################################################
-# Grab latest TensorFlow from git.
+# Grab v0.8 TensorFlow from git.
 ################################################################################
 echo -e "\e[36m***Cloning TensorFlow from GitHub*** \e[0m"
-git clone --recurse-submodules https://github.com/tensorflow/tensorflow
+git clone --recurse-submodules -b r0.8 https://github.com/tensorflow/tensorflow.git
 sed -i 's/kDefaultTotalBytesLimit = 64/kDefaultTotalBytesLimit = 128/' tensorflow/google/protobuf/src/google/protobuf/io/coded_stream.h
 
 ################################################################################

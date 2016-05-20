@@ -37,12 +37,11 @@ sudo apt-get install oracle-java8-installer
 # Install Bazel dep.
 ################################################################################
 echo -e "\e[36m***Installing Bazel*** \e[0m"
-wget https://goo.gl/W0Jztd -O bazel-0.1.5-installer-linux-x86_64.sh
-chmod +x bazel-0.1.5-installer-linux-x86_64.sh
-sudo ./bazel-0.1.5-installer-linux-x86_64.sh --user
-rm bazel-0.1.5-installer-linux-x86_64.sh
+wget https://goo.gl/OQ2ZCl -O bazel-installer-linux-x86_64.sh
+chmod +x bazel-installer-linux-x86_64.sh
+sudo ./bazel-installer-linux-x86_64.sh
+rm bazel-installer-linux-x86_64.sh
 sudo chown $USER:$USER ~/.cache/bazel/
-sudo echo "PATH=\$PATH:\$HOME/bin" >> ~/.bashrc
 
 ################################################################################
 # Fetch Swig and Python deps.
@@ -57,15 +56,15 @@ libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
 # Fetch and install Python.
 ################################################################################
 echo -e "\e[36m***Installing Python*** \e[0m"
-wget https://www.python.org/ftp/python/2.7.10/Python-2.7.10.tgz
-tar -xvf Python-2.7.10.tgz
-cd Python-2.7.10
+wget https://www.python.org/ftp/python/3.5.1/Python-3.5.1.tgz
+tar -xvf Python-3.5.1.tgz
+cd Python-3.5.1
 ./configure
 make
 sudo make install
 cd ../
-rm Python-2.7.10.tgz
-sudo echo "alias python=python2.7" >> ~/.bashrc
+rm Python-3.5.1.tgz
+sudo echo "alias python=python3.5" >> ~/.bashrc
 source ~/.bashrc
 
 ################################################################################

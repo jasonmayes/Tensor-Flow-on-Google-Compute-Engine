@@ -29,7 +29,7 @@ Lets go...
 /usr/bin/python unless you have a different version you wish to use.
 5. Now the environment is setup we can compile TensorFlow. Ensure you are in correct directory: ```cd ~/tensorflow/tensorflow``` and then run: ```bazel build -c opt //tensorflow/tools/pip_package:build_pip_package```. This will take some time to compile. Grab a coffee. No really, we are looking at about 35 minutes here...
 6. TensorFlow is now ready to be used! Woohoo! Run the included example to test: ```bazel run tensorflow/models/image/imagenet:classify_image``` (this will also take time if it is the first time you have run it). At the end of execution you should see the highest probablity is a "Panda" which is the example image we are testing when running this.
-7. Optional: You may also want to compile the examples for image classification and labelling if you plan to use those: ```bazel build -c opt --copt=-mavx tensorflow/examples/image_retraining:retrain```  and ```bazel build -c opt --copt=-mavx tensorflow/examples/label_image```
+7. Optional: You may also want to compile the examples for image classification and labelling if you plan to use those: ```bazel build -c opt --copt=-mavx tensorflow/examples/image_retraining:retrain```  and ```bazel build -c opt --copt=-mavx tensorflow/examples/label_image``` These commands compile with AVX support to get the speed improvements described below. Please ensure your CPU supports AVX if you run these. Currently GCE VCPUs do at time of writing.
 
 
 ## Notes

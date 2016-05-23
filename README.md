@@ -22,11 +22,14 @@ A heads up of what your 5 minutes of fun will look like (sped up 400%):
 
 Lets go...
 
-1. Save the script to your home directory.
-2. ```chmod +x setupTensorFlowGCE.sh ```
-3. Run: ```./setupTensorFlowGCE.sh``` and follow any instructions that appear (basically say yes to everything and accept Java licence). This will take about 5 mins to install everything if you are watching the screen :-) Once it has finished run ```source ~/.bashrc``` to ensure your terminal can find bazel. Alternatively you can just log out and in again.
-4. Now the environment is setup we can compile TensorFlow. Ensure you are in correct directory: ```cd ~/tensorflow/tensorflow``` and then run: ```bazel build -c opt //tensorflow/tools/pip_package:build_pip_package```. This will take some time to compile. Grab a coffee. No really, we are looking at about 35 minutes here...
-5. TensorFlow is now ready to be used! Woohoo! Run the included example to test: ```bazel run tensorflow/models/image/imagenet:classify_image``` (this will also take time if it is the first time you have run it).
+1. Save the script to your home directory. ```git clone https://github.com/jasonmayes/Tensor-Flow-on-Google-Compute-Engine.git ```
+2. ```cd Tensor-Flow-on-Google-Compute-Engine```
+3. ```chmod +x setupTensorFlowGCE.sh```
+4. Edit file and remove swap sections if your machine has >= 8GB RAM. Then run: ```./setupTensorFlowGCE.sh``` and follow any instructions that appear (basically say yes to everything and accept Java licence). This will take about 5 mins to install everything if you are watching the screen :-) Once it has finished run ```source ~/.bashrc``` to ensure your terminal can find bazel. Alternatively you can just log out and in again. In the final step you will be asked to locate python, please use:
+/usr/bin/python unless you have a different version you wish to use.
+5. Now the environment is setup we can compile TensorFlow. Ensure you are in correct directory: ```cd ~/tensorflow/tensorflow``` and then run: ```bazel build -c opt //tensorflow/tools/pip_package:build_pip_package```. This will take some time to compile. Grab a coffee. No really, we are looking at about 35 minutes here...
+6. TensorFlow is now ready to be used! Woohoo! Run the included example to test: ```bazel run tensorflow/models/image/imagenet:classify_image``` (this will also take time if it is the first time you have run it). At the end of execution you should see the highest probablity is a "Panda" which is the example image we are testing when running this.
+7. Optional: You may also want to compile the examples for image classification and labelling if you plan to use those: ```bazel build -c opt --copt=-mavx tensorflow/examples/image_retraining:retrain```  and ```bazel build -c opt --copt=-mavx tensorflow/examples/label_image```
 
 
 ## Notes

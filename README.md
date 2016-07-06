@@ -1,6 +1,6 @@
 # Tensor-Flow-on-Google-Compute-Engine
 
-**A simple script to set up GCE environment in Google Cloud so it is ready to run TensorFlow - an Open Source Software Library for Machine Intelligence.**
+**A simple script to set up GCE environment in Google Cloud so it is ready to run TensorFlow - an Open Source Software Library for Machine Intelligence. Machine learning made simple!**
 
 ![alt text](https://cloud.githubusercontent.com/assets/4972997/13024300/8889655a-d1a7-11e5-8bb5-5bb4e72bf21e.png "Recognizing Pandas on GCE!")
 
